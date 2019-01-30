@@ -1,0 +1,109 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Long Lined Cover Letter
+% LaTeX Template
+% Version 1.0 (1/6/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Matthew J. Miller
+% http://www.matthewjmiller.net/howtos/customized-cover-letter-scripts/
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[10pt,stdletter,dateno,sigleft]{newlfm} % Extra options: 'sigleft' for a left-aligned signature, 'stdletternofrom' to remove the from address, 'letterpaper' for US letter paper - consult the newlfm class manual for more options
+
+\usepackage{charter} % Use the Charter font for the document text
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+
+\usepackage{etoolbox}
+
+\makeatletter
+\patchcmd{\@zfancyhead}{\fancy@reset}{\f@nch@reset}{}{}
+\patchcmd{\@set@em@up}{\f@ncyolh}{\f@nch@olh}{}{}
+\patchcmd{\@set@em@up}{\f@ncyolh}{\f@nch@olh}{}{}
+\patchcmd{\@set@em@up}{\f@ncyorh}{\f@nch@orh}{}{}
+\makeatother
+
+%\newsavebox{\Luiuc}\sbox{\Luiuc}{\parbox[b]{1.75in}{\vspace{0.5in}
+%\includegraphics[width=1.2\linewidth]{logo.png}}} % Company/institution logo at the top left of the page
+%\makeletterhead{Uiuc}{\Lheader{\usebox{\Luiuc}}}
+
+\newlfmP{sigsize=50pt} % Slightly decrease the height of the signature field
+\newlfmP{addrfromphone} % Print a phone number under the sender's address
+\newlfmP{addrfromemail} % Print an email address under the sender's address
+\PhrPhone{Phone} % Customize the "Telephone" text
+\PhrEmail{Email} % Customize the "E-mail" text
+
+%\lthUiuc % Print the company/institution logo
+
+%----------------------------------------------------------------------------------------
+%	YOUR NAME AND CONTACT INFORMATION
+%----------------------------------------------------------------------------------------
+
+\namefrom{Rui Marques} % Name
+
+\addrfrom{
+\today\\[12pt] % Date
+Calle Aaiún 5, 8A \\ % Address
+15010 A Coruña, Spain
+}
+
+\phonefrom{+34 663 559 607} % Phone number
+
+\emailfrom{ruifm59@gmail.com} % Email address
+
+%----------------------------------------------------------------------------------------
+%	ADDRESSEE AND GREETING/CLOSING
+%----------------------------------------------------------------------------------------
+
+\greetto{To Whom it may concern,} % Greeting text
+\closeline{Sincerely yours,} % Closing text
+
+\nameto{} % Addressee of the letter above the to address
+
+\addrto{}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+\begin{newlfm}
+
+%----------------------------------------------------------------------------------------
+%	LETTER CONTENT
+%----------------------------------------------------------------------------------------
+
+%PARAGRAPH ONE: State the reason for the letter, name the position or type of work you are applying for and identify the source from which you learned of the opening (i.e. career development center, newspaper, employment service, personal contact).
+
+I am currently a final year Engineering Physics master student at Instituto Superior Tecnico. My specialization is High Energy Theoretical Physics and I'm working on my master thesis in \emph{Massive Graviton Theories and vDZV discontinuities} at Instituto Superior Tecnico (Lisbon), while looking for work opportunities in A Coruña, Spain. With this letter, I express my deep interest in the this position.
+
+
+
+%PARAGRAPH TWO: Indicate why you are interested in the position, the company, its products, services - above all, stress what you can do for the employer. If you are a recent graduate, explain how your academic background makes you a qualified candidate for the position. If you have practical work experience, point out specific achievements or unique qualifications. Try not to repeat the same information the reader will find in the resume. Refer the reader to the enclosed resume or application which summarizes your qualifications, training, and experiences. The purpose of this section is to strengthen your resume by providing details which bring your experiences to life. 
+
+
+%%% College
+
+During my studies, I mastered most of my courses with high academic achievement, finishing consistently in the top 10 \%. My coursework gave me an intense and thorough background in physics, as well as core engineering. I developed useful skills such as persistence, problem-solving, creativity and out-of-the-box-thinking. Among several group projects, I had the chance to develop my teamwork, leadership, argumentation and critical thinking. From my 3 programming courses, I gained a high level proficiency in C/C++, Mathematica, multi-threading and GPU coding. I completed 2 courses in basic business and economics, both of which I excelled, showing my ability to thrive in broader range of fields.
+
+
+My skill set  would make me an asset in the bright dynamic environment that this company promises to be. Grasping new abstract concepts is one of my strongest traits. I have the ability of acquiring and filtering large amounts of information and retaining it for extended periods of time. As I am an excellent self-learner, tackling hard new topics was never a problem but rather an enjoyment. Working in this field seems like the best fit for me as it allows me to face new challenges whistle simultaneously combining it with me physics and engineering academic background.
+%PARAGRAPH THREE: Request a personal interview and indicate your flexibility as to the time and place. Repeat your phone number in the letter and offer assistance to help in a speedy response. For example, state that you will be in the city where the company is located on a certain date and would like to set up an interview. Alternatively, state that you will call on a certain date to set up an interview. End the letter by thanking the employer for taking time to consider your credentials. 
+
+
+Thank you for taking the time to consider my application and I am looking forward to hearing from you.
+
+%----------------------------------------------------------------------------------------
+
+\end{newlfm}
+\end{document}
