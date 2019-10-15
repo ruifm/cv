@@ -1,312 +1,358 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Twenty Seconds Resume/CV
-% LaTeX Template
-% Version 1.0 (14/7/16)
-%
-% Original author:
-% Carmine Spagnuolo (cspagnuolo@unisa.it) with major modifications by 
-% Vel (vel@LaTeXTemplates.com) and Harsh (harsh.gadgil@gmail.com)
-%
-% License:
-% The MIT License (see included LICENSE file)
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%----------------------------------------------------------------------------------------
-%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
-%----------------------------------------------------------------------------------------
-
 \documentclass[letterpaper]{twentysecondcv} % a4paper for A4
+\usepackage{common}
+\newif\ifen{}
+\newif\ifspa{}
+
+\newcommand{\en}[1]{\ifen#1\fi}
+\newcommand{\spa}[1]{\ifspa#1\fi}
+
+\entrue{}
+% \spatrue{}
 
 % Command for printing skill overview bubbles
-\newcommand\skills{ 
-~
+\newcommand\skills{
 	\smartdiagram[bubble diagram]{
-        \textbf{Engineering}\\\textbf{Physics},
-        \textbf{Mathematical}\\\textbf{Abstraction},
-        \textbf{Automated}\\\textbf{Driving},
-        \textbf{Dynamical}\\\textbf{Simulations},
-        \textbf{Machine}\\\textbf{Learning},
-        \textbf{Software}\\\textbf{Development},
-        \textbf{Statistical}\\\textbf{Analysis}
-    }
+		\textbf{\en{Engineering}\spa{Ingeniería}}\\\textbf{\en{Physics}\spa{Física}},
+		\textbf{\en{Mathematical}\spa{Abstracción}}\\\textbf{\en{Abstraction}\spa{Matemática}},
+		\textbf{\en{Automated}\spa{Conducción}}\\\textbf{\en{Driving}\spa{Autónoma}},
+		\textbf{Problem}\\\textbf{Solving},
+		\textbf{Machine}\\\textbf{Learning},
+		\textbf{\en{Software}}\spa{Desarrollo}\\\textbf{\en{Development}\spa{Software}},
+		\textbf{Computer}\\\textbf{Vision}
+	}
 }
 
 % Programming skill bars
-\programming{{HTML5 $\textbullet$ Java/ 1},{gnuplot $\textbullet$ javascript/ 2},{Matlab $\textbullet$ ADTF $\textbullet$ CUDA $\textbullet$ OpenMP/ 3.5},{C $\textbullet$ C++  $\textbullet$ \LaTeX $\textbullet$ python  $\textbullet$ Mathematica/ 5}}
+\programming{{HTML5 $\textbullet{}$ Java/ 1},{gnuplot $\textbullet{}$
+			javascript/ 2},{Matlab $\textbullet{}$ ADTF $\textbullet{}$ CUDA
+			$\textbullet{}$ OpenMP/ 3.5},{C $\textbullet{}$ C++  $\textbullet{}$ \LaTeX{} $\textbullet{}$ python  $\textbullet{}$ Mathematica/ 5}}
 
-\languages{{French $\textbullet$ Polish /1},{Spanish/ 5},{Portuguese / 6},{English / 6}}
+\languages{{\en{French}\spa{Francés}$\textbullet{}$
+			\en{Polish}\spa{Polaco} /1},{\en{Spanish}\spa{Castellano}/
+			5},{\en{Portuguese}\spa{Portugués} / 6},{\en{English}\spa{Inglés} / 6}}
 
-\projects{
-\textbf{DecAR} - An augmented reality interior decoration app for Android \\
-        \textbf{CIS*6320} - An implementation of the Bicubic interpolation algorithm in C++
-        \textbf{CIS*6650} - A comparative statistical study of SVM kernels, and number of hidden layers in ANN, on 5 UCI datasets
-        \textbf{CIS*6660} - A data linkage project to integrate Canada's WWI casualties and 1901 Canadian census using an SVM
-        \textbf{CIS*6650} - A statistical study of spurious correlations, such as correlating beer production with election outcome
-}
-
-
-
-%----------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------
 %	 PERSONAL INFORMATION
 %----------------------------------------------------------------------------------------
-% If you don't need one or more of the below, just remove the content leaving the command, e.g. \cvnumberphone{}
 
-\cvname{Rui Marques} % Your name
-\cvjobtitle{ Physics Engineer } % Job
-% title/career
+\cvname{Rui Marques}
+\cvjobtitle{\en{Software Engineer}\spa{Ingeniero de Software}}
 \profilepic{photo.png}
 \cvlinkedin{in/ruiferreiramarques}
 \cvgithub{github.com/ruifm}
-\cvnumberphone{\href{tel:+34663559607}{(+34) 663 559 607}} % Phone number
-\cvsite{hgadgil.com} % Personal website
-\cvmail{ruifmarques@pm.me} % Email address
+\cvnumberphone{\href{tel:+34663559607}{(+34) 663 559 607}}
+\cvsite{ruimarques.xyz}
+\cvmail{inquiries@ruimarques.xyz}
 \cvskype{ruifm75969}
-\cvaddress{\href{https://www.google.es/maps/place/R\%C3\%BAa+\%C3\%81ngel+Senra,+29,+15007+A+Coru\%C3\%B1a/\@43.3548567,-8.4109767,17z/data=!3m1!4b1!4m5!3m4!1s0xd2e7c906066d703:0x5930f780929bf00b!8m2!3d43.3548567!4d-8.408788?hl=en}{Rúa Ángel Senra 29, 8E (15007 A Coruña)}}
+\cvaddress{\href{https://goo.gl/maps/ikvtH4ZwUw6LTwAL8}{A Coruña, Spain}}
+\cvtwitter{rui\_f\_marques}
 
 
-\aboutme{Automated Driving LiDAR Developer and final year Engineering Physics master student. Looking for new challenges in IT in A Coruña.
+\aboutme{
+	\en{Deep Learning, Computer Vision and C++/python developer with an academic background in Theoretical Physics and Engineering.
 
-Extreme focus, concentration, the ability to work out large quantities of information, coping with a close deadline are my best and most useful traits, acquired in a high competitive environment.}
+		I am able to cope and adapt to new
+		and challenging tasks. My main motivation is tackling interesting
+		problems. I consider myself reasonably good self-learner.}
+	\spa{Desarrollador especializado en Deep Learning, Visión Computacional
+		y C++ con formación académica en Física Teórica y Ingeriría.
+
+		Soy capaz de hacer frente y adaptarme a tareas nuevas y desafiantes. Mi
+		principal motivación es abordar problemas interesantes. Me considero un
+		\emph{self-learner} razonablemente bueno.}
+}
 
 %----------------------------------------------------------------------------------------
 
 \begin{document}
 
-\makeprofile % Print the sidebar
+\makeprofile{}
 
 %----------------------------------------------------------------------------------------
 %    EXPERIENCE
 %----------------------------------------------------------------------------------------
 
-\section{Experience}
+\en{\section{Experience}}\spa{\section{Experiencia}}
 
 \begin{twenty} % Environment for a list with descriptions
-\twentyitem
-        {April 2018}
-        {Present}
-        {Deep Learning ADAS Software Engineer}
-        {\href{https://www.xesolinnovation.com/}{Xesol Innovation}}
-        {Vigo, Spain}
-        {\begin{itemize}
-        \item Full stack development of a state-of-the-art fully Convolutional Neural Networking for Semantic Segmentation (classification of every pixel in an image).
-        \item Managing the dataset, training, hyperparameter tuning, validation and model exporting in tensorflow and caffe.
-        \item Integration of a tensorflow model in C++ for production in a real-time environment
-        \item Extended Deep Learning results by geometric modeling using openCV.
-        \item \textbf{Used Tools:} C++, python, tensorflow, tensorflow C++ API, CLion, caffe, tf-slim, keras, openCV, CUDA, matplotlib, numpy, bash,, git, doxygen, cmake, Makefile, JIRA, \LaTeX
-        \end{itemize}}
-\twentyitem
-        {Jan 2018}
-        {March 2018}
-        {ADAS Software Developer}
-        {\href{https://www.ctag.com/}{CTAG (Automation Technologies)}}
-        {Vigo, Spain}
-        {\begin{itemize}
-        \item Worked in the beginning in an internal project as a LiDAR preprocessing developer for a self driving car.
-        \item Due to my good performance and quick learning, the company transfered me to a special task force that works directly to a client.
-        \item Worked with 2 Agile Methodologies: SCRUM and Kanban.
-        \item Developed software in a collaborative team environment.
-        \item Picked up the entire code-base from a departing former employee and build up on that.
-        \item Managed, proposed and reviewed System and Software Requirements.
-        \item Developed and maintained software at the Client's request always with quality and before the requested deadlines.
-        \item Kept an efficient communication with the Client.
-        \item Performed weekly software verifications: sanity checks, runtime checks, code coverage tests, static tests (code linting against MISRA-C++) and reported them to the Client.
-        \item \textbf{Used Tools:} C++, ADTF, Eclipse, Qt, Qt-creator, python, matplotlib, numpy, bash, Matlab, Redmine, git, Octave, MSVS, doxygen, cmake, CANAlyzer, CANoe, Wireshark, Makefile, JIRA, Serena, DOORS, Google Docs, html, xml, \LaTeX
-        \item \textbf{Attended Courses:} V Life Cycle, Management of Requirements, Automotive Spice, ISO26262, DOORS, SCRUM 
-        \end{itemize}}
-        \\
-    \twentyitem
-        {Sep 2017}
-        {Oct 2017}
-        {Commercial Sales Representative}
-        {M\&S Servicios y Marketing}
-        {A Coruña, Spain}
-        {Responsible to bring a constant flow of profitable new business in the energy sector by providing state-of-the-art solutions to potential customers.}
-    \\   
-    \twentyitem
-        {Aug 2012}
-        {Sep 2012}
-        {Particle Physics Intern}
-        {\href{https://www.lip.pt}{LIP (Portuguese Particle Physics Laboratory)}}
-        {Lisbon, Portugal}
-        {Worked on cosmic ray data and computer simulations from the \emph{Pierre Auger Observatory}, Advisor: Pedro Abreu (\href{mailto:abreu@lip.pt}{abreu@lip.pt})
-        }
+	\twentyitem
+	{\en{April}\spa{Abril} 2018}
+	{\en{Present}\spa{Presente}}
+	{\en{Deep Learning ADAS Software Engineer}\spa{Ingeniero de Deep Learning y
+			Software de ADAS}}
+	{\href{https://www.xesolinnovation.com/}{Xesol Innovation}}
+	{Vigo, \en{Spain}\spa{España}}
+	{\begin{itemize}
+			\item \en{Kept up to date with detection and segmentation
+				      state-of-the-art Convolutional Neural Networks.}\spa{Busqué las
+				      mejores redes neuronales convolucionales para detección y
+				      segmentación.}
+			\item\en{Managed internal and public datasets, their synthetic
+				      augmentation, training, hyperparameter tuning, validation and
+				      model exporting to different frameworks.}\spa{Gestioné datasets
+				      internos y públicos, su augmentación sintética, entrenamiento,
+				      ajuste de híperparametros, validación y exportación de modelos a otras
+				      frameworks.}
+			\item\en{Integration of deep learning models in C++ for  real-time
+				      commercial applications with severe hardware
+				      constraints.}\spa{Integración de modelos de deep learning en C++
+				      para aplicaciones comerciales en tiempo real com grandes restricciones
+				      de hardware.}
+			\item \en{Developed a perception and fusion logic layer from scratch that
+				      leverage data from neural networks and other software modules. Implemented an
+				      Extended Kalman Filter to get a smooth and reliable representation of the
+				      environment.}\spa{Desarrollé una capa de percepción y fusion desde el cero que
+				      aprovecha los datos de redes neuronales y otros módulos de software. Implementé
+				      un Extended Kalman Filter para obtener una representación estable y fiable del
+				      entorno exterior.}
+			\item\en{Managed and maintained the entire core of the ADAS
+				      software.}\spa{Gestioné y mantuve todo el núcleo de software de ADAS.}
+			\item \textbf{\en{Tools}\spa{Herramientas}:} C++, python, tensorflow, tensorflow C++
+			      API, CLion, caffe, tf-slim, keras, OpenCV, CUDA, matplotlib,
+			      numpy, bash, git, doxygen, cmake, Makefile, redmine, \LaTeX{}
+		\end{itemize}}
+	\twentyitem
+	{\en{Jan}\spa{Ene} 2018}
+	{Mar 2018}
+	{\en{ADAS Software Developer}\spa{Desarrollador de Software de ADAS}}
+	{\href{https://www.ctag.com/}{CTAG}}
+	{Vigo, \en{Spain}\spa{España}}
+	{\begin{itemize}
+			\item\en{Worked in the beginning in an internal project as a LiDAR preprocessing developer for a self driving car.}\spa{Trabajé al principio en un proyecto interno como desarrollador del sistema LiDAR de un coche autónomo.}
+			\item \en{Due to my good performance and quick learning, the company transfered me to a special task force that works directly to a client.
+			      }\spa{Debido a la rapidez con que terminé el proyecto, me transferirán para un equipo que trabaja directamente para un cliente.}
+			      % \item \en{Worked with 2 Agile Methodologies: SCRUM and Kanban.
+			      % }\spa{Trabajé con 2 Metodologías Ágiles: SCRUM y Kanban.}
+			      % \item \en{Developed software in a collaborative team environment.
+			      % }\spa{Desarrollé software en un entorno colaborativo de equipo.}
+			\item \en{Picked up the entire code base from a departing former employee and build up on that.
+			      }\spa{Cogí la base de código entera de un compañero que estaba de salida.}
+			\item \en{Managed, proposed and reviewed System and Software Requirements.
+			      }\spa{Gestioné, propuse y revisé Requisitos de Sistema y de Software.}
+			\item \en{Developed and maintained software at the Client's request always with quality and before the requested deadlines.
+			      }\spa{Desarrollé y mantuve software cuando pedido por el Cliente siempre con cualidad y antes del plazo.}
+			\item \en{Kept an efficient communication with the Client.
+			      }\spa{Mantuve una comunicación eficiente con el Cliente.}
+			\item \en{Performed weekly software verifications: sanity checks, runtime checks, code coverage tests, static tests (code linting against MISRA-C++) and reported them to the Client.  }\spa{Realicé verificaciones semanales de software: sanity checks, runtime checks, code coverage tests, static tests (code linting against MISRA-C++) y las reporté al Cliente.}
+			\item \textbf{\en{Tools}\spa{Herramientas}:} C++, ADTF, Eclipse, Qt, python,
+			      matplotlib, numpy, bash, Matlab, redmine, git, Octave, MSVS,
+			      doxygen, cmake, CANAlyzer, CANoe, Wireshark, Makefile, JIRA,
+			      Serena, DOORS, Google Docs, html, xml, \LaTeX{}
+			\item \textbf{\en{Attended Courses}\spa{Formaciones}:} \en{V Life
+				      Cycle, Management of Requirements}\spa{Ciclo de Vida V, Gestión
+				      de Requisitos}, Automotive SPICE, ISO26262, DOORS, SCRUM
+		\end{itemize}}
+	% \twentyitem
+	% {Sep 2017}
+	% {Oct 2017}
+	% {Commercial Sales Representative}
+	% {M\&S Servicios y Marketing}
+	% {A Coruña, \en{Spain}\spa{España}}
+	% {\en{Responsible to bring a constant flow of profitable new business in the energy sector by providing state-of-the-art solutions to potential customers.}\spa{Responsable de traer un flujo constante de nuevos negocios rentables en el sector de la energía proporcionando soluciones de vanguardia a potenciales clientes.}}
+	% \twentyitem
+	% {\en{Aug}\spa{Ago} 2012}
+	% {Sep 2012}
+	% {\en{Particle Physics Intern}\spa{Becario de Física de Partículas}}
+	% {\href{https://www.lip.pt}{LIP (\en{Portuguese Particle Physics Laboratory}\spa{Laboratório Portugués de Física de Partículas})}}
+	% {\en{Lisbon}\spa{Lisboa}, Portugal}
+	% {\en{Worked on cosmic ray data and computer simulations from the \emph{Pierre Auger Observatory}, Advisor}\spa{Trabajé en datos de rayos cósmicos y simulaciones por ordenador del \emph{Observatorio Pierre Auger}. Supervisor}: Pedro Abreu (\href{mailto:abreu@lip.pt}{abreu@lip.pt})
+	% }
 \end{twenty}
 
-\section{Research}
-\begin{twenty}
-    \twentyitem
-        {Feb 2017}
-        {Jan 2018}
-        {MSc.  Research Assistant}
-        {\href{https://centra.tecnico.ulisboa.pt/network/grit/team/}{GRIT-CENTRA}}
-        {Lisbon, Portugal}
-        {
-        \textbf{Thesis}: Massive Graviton Theories and vDZV discontinuities
-        {\begin{itemize}
-        \item Worked on an extension of Einstein's General Relativity in which the graviton has a non zero mass and worked out its possible implications to experimental results such as gravitational waves.
-        \item \textbf{Tools}: Python, scikit-learn, \LaTeX, matplotlib, Mathematica, gnuplot
-        \end{itemize}}
-        }
-\end{twenty}
+% \en{\section{Research}}\spa{\section{Investigación}}
+% \begin{twenty}
+% 	\twentyitem
+% 	{Feb 2017}
+% 	{\en{Jan}\spa{Ene} 2018}
+% 	{MSc. \en{Research Assistant}\spa{Investigador Asistente}}
+% 	{\href{https://centra.tecnico.ulisboa.pt/network/grit/team/}{GRIT-CENTRA}}
+% 	{\en{Lisbon}\spa{Lisboa}, Portugal}
+% 	{
+% 		\en{\textbf{Thesis}: Massive Graviton Theories and vDVZ discontinuities
+% 		}\spa{\textbf{Tesis}: Gravitones masivos y discontinuidades vDVZ}
+% 		\begin{itemize}
+% 			\item \en{Worked on an extension of Einstein's General Relativity in which the graviton has a non zero mass and worked out its possible implications to experimental results such as gravitational waves.}\spa{Investigué una extensión de la Teoría de Relatividad General de Einstein en que el gravitón tiene una masa no nula y exploré sus consequências en resultados experimentales como ondas gravitacionales.}
+% 			\item \textbf{\en{Tools}\spa{Herramientas}}: Python, scikit-learn, \LaTeX{}, matplotlib, Mathematica, gnuplot
+% 		\end{itemize}
+% 	}
+% \end{twenty}
 
 %----------------------------------------------------------------------------------------
 %	 EDUCATION
 %----------------------------------------------------------------------------------------
-\section{Education}
-
+\en{\section{Education}}\spa{\section{Formación Académica}}
 \begin{twenty} % Environment for a list with descriptions
 	\twentyitem
-    	{Sep 2016}
-        {June 2017}
-        {Erasmus exchange \@ \textsc{Theoretical Physics}}
-        {\href{http://web.science.uu.nl/itf/}{ITF, Utrecht University}}
-        {Utrecht, Netherlands}
-        {Studied Quantum Information and Cosmology topics.
-        Academic Referee: Enrico Pajer (\href{mailto:e.pajer@uu.nl}{e.pajer@uu.nl}) | \normalsize \textsc{GPA}: 8/10}
+	{Sep 2016}
+	{Jun 2017}
+	{Erasmus \@ \textsc{\en{Theoretical Physics}\spa{Física Teórica}}}
+	{\href{http://web.science.uu.nl/itf/}{ITF, \en{Utrecht University}\spa{Universidad de Utrecht}}}
+	{Utrecht, \en{Netherlands}\spa{Holanda}}
+	{\en{Studied Quantum Information and Cosmology topics.
+			Academic Referee}\spa{Estudié tópicos de información cuántica.
+			Referencia Académica}: Enrico Pajer
+		(\href{mailto:e.pajer@uu.nl}{e.pajer@uu.nl}) | \normalsize
+		\textsc{\en{GPA}\spa{Media}}: 8/10}
 	\twentyitem
-    	{Sep 2012}
-		{Feb 2018}
-        {MSc in \textsc{\href{https://www.youtube.com/watch?v=0eoa0f5nVA0}{Engineering Physics}} \faYoutubePlay}
-        {\href{https://www.youtube.com/watch?v=EGue8EwE3mI}{Instituto Superior Tecnico} \faYoutubePlay}
-        {Lisbon, Portugal}
-        {High Energy Theoretical Physics specialization}
-    \twentyitem
-        {Sep 2009}
-        {Feb 2012}
-        {High School \@ \textsc{Natural Sciences}}
-        {Escola Secundária D. Pedro V}
-        {Lisbon, Portugal}
-        {Physics and Math: 20/20, English 19/20 | 2012 top student}
-	%\twentyitem{<dates>}{<title>}{<organization>}{<location>}{<description>}
+	{Sep 2012}
+	{Feb 2018}
+	{MSc in
+		\textsc{\href{https://www.youtube.com/watch?v=0eoa0f5nVA0}{\en{Engineering
+					Physics}\spa{Ingeniería Física}}} \faYoutubePlay}
+	{\href{https://www.youtube.com/watch?v=EGue8EwE3mI}{Instituto Superior Técnico} \faYoutubePlay}
+	{\en{Lisbon}\spa{Lisboa}, Portugal}
+	{\en{High Energy Theoretical Physics specialization}\spa{Especialización en
+			Física de Alta Energía} \\
+		\en{\textbf{Thesis}: Massive Graviton Theories and vDVZ discontinuities
+		}\spa{\textbf{Tesis}: Gravitones masivos y discontinuidades vDVZ}
+		\begin{itemize}
+			\item \en{Worked on an extension of Einstein's General Relativity in which the graviton has a non zero mass and worked out its possible implications to experimental results such as gravitational waves.}\spa{Investigué una extensión de la Teoría de Relatividad General de Einstein en que el gravitón tiene una masa no nula y exploré sus consequências en resultados experimentales como ondas gravitacionales.}
+			\item \textbf{\en{Tools}\spa{Herramientas}}: Python, scikit-learn, \LaTeX{}, matplotlib, Mathematica, gnuplot
+		\end{itemize}
+	}
+	% \twentyitem
+	% {Sep 2009}
+	% {Feb 2012}
+	% {High School \@ \textsc{\en{Natural Sciences}\spa{Ciencias Naturales}}}
+	% {Escola Secundária D. Pedro V}
+	% {Lisbon, Portugal}
+	% {\en{Physics and Math}\spa{Física y Matemática}: 20/20,
+	% 	\en{English}\spa{Inglés} 19/20 | \en{2012 top student}\spa{mejor estudiante
+	% 		de 2012}}
 \end{twenty}
 
 \newpage
-\continuesidebar
+\continuesidebar{}
 
 
-\section{Scholarships \& Certificates}
-
+\en{\section{Scholarships \& Certificates}}\spa{\section{Becas y Certificados}}
 \begin{twenty} % Environment for a list with descriptions
-    \twentyitem
-        {Oct 2017}
-        {}
-        {Neural Networks and Deep Learning by deeplearning.ai}
-        {\href{https://www.coursera.org/account/accomplishments/records/CF342FNNVUXY}{Coursera}}
-        {}
-        {}
-    \twentyitem
-        {Oct 2017}
-        {}
-        {Improving Deep Neural Networks: Hyperparameter tuning, Regularization and Optimization by deeplearning.ai}
-        {\href{https://www.coursera.org/account/accomplishments/records/MQVCJFJ849GK}{Coursera}}
-        {}
-        {}
-    \twentyitem
-        {May 2012}
-        {}
-        {Nacional Finalist}
-        {\href{http://www.sp-astronomia.pt/olimpiadas}{Astronomy and Astrophysics Portuguese Olympiads}}
-        {Sao Miguel, Azores, Portugal}
-        {}
-    \twentyitem
-        {Jan 2012}
-        {May 2012}
-        {Advanced pre-college physics school}
-        {\href{http://quark.fis.uc.pt/}{Quark! Project}}
-        {Coimbra, Portugal}
-        {}
-    %\twentyitem{<dates>}{<title>}{<organization>}{<location>}{<description>}
+	\twentyitem
+	{Oct 2017}
+	{}
+	{\en{Neural Networks and Deep Learning by deeplearning.ai}\spa{Redes Neuronales y Aprendizaje Profundo por deeplearning.ai}}
+	{\href{https://www.coursera.org/account/accomplishments/records/CF342FNNVUXY}{Coursera}}
+	{}
+	{}
+	\twentyitem
+	{Oct 2017}
+	{}
+	{\en{Improving Deep Neural Networks: Hyperparameter tuning, Regularization
+			and Optimization by deeplearning.ai}\spa{Mejora de Redes Neuronales
+			Profundas: Optimización, Regularización y Optimización de Hiperparametros por deeplearning.ai}}
+	{\href{https://www.coursera.org/account/accomplishments/records/MQVCJFJ849GK}{Coursera}}
+	{}
+	{}
+	\twentyitem
+	{May 2012}
+	{}
+	{\en{Nacional Finalist}\spa{Finalista Nacional}}
+	{\href{http://www.sp-astronomia.pt/olimpiadas}{\en{Astronomy and Astrophysics Portuguese Olympiads}\spa{Olimpiadas de Astronomía e Astrofísica Portuguesas}}}
+	{São Miguel, Azores, Portugal}
+	{}
+	\twentyitem
+	{Jan 2012}
+	{May 2012}
+	{\en{Advanced precollege physics school}\spa{Escuela de física pre-universitaria avanzada}}
+	{\href{http://quark.fis.uc.pt/}{\en{Quark! Project}\spa{Proyecto Quark!}}}
+	{Coimbra, Portugal}
+	{}
 \end{twenty}
 
-\section{Programming Projects}
+\en{\section{Programming Projects}}\spa{\section{Proyectos de Programación}}
 
 \begin{twenty} % Environment for a list with descriptions
-    \twentyitem
-        {Oct 2017}
-        {Present}
-        {Space Out}
-        {\href{https://github.com/ruifm/space-out}{\faGithub github.com/ruifm/space-out}}
-        {}
-        {Pygame 1vs1 version of the classic arcade game 'Asteroids'. Intended for training of a reinforcement learning neural network to work as an AI opponent.}
-    \twentyitem
-        {Dec 2016}
-        {Jan 2017}
-        {Entanglement Entropy}
-        {\href{https://github.com/ruifm/ed-triangular}{\faGithub github.com/ruifm/ed-triangular}}
-        {}
-        {Mathematica notebook for the exact digitalization and Entanglement Entropy computation in a Triangular Spin lattice.}
-    \twentyitem
-        {May 2015}
-        {}
-        {Oort Cloud}
-        {\href{https://github.com/ruifm/oort}{\faGithub github.com/ruifm/oort}}
-        {}
-        {A javascript version using the Phaser framework of the classic arcade game 'Asteroids', modified by giving it a little bit of a 'flappy bird' tone, i.e. a never ending game. Hosted here: \href{www.xente.mundo-r.com/20624313W0001/index.html}{xente.mundo-r.com/20624313W0001/index.html}}
-    \twentyitem
-        {May 2014}
-        {}
-        {Antifitter}
-        {\href{https://github.com/ruifm/antifitter}{\faGithub github.com/ruifm/antifitter}}
-        {}
-        {C++ program that yields fake experimental data to fit a certain function and plots it automatically.}
-     \twentyitem
-        {Dec 2013}
-        {Jan 2014}
-        {Gross-Pitaevskii Simulator}
-        {\href{https://github.com/ruifm/gross-pitaevskii}{\faGithub github.com/ruifm/gross-pitaevskii}}
-        {}
-        {Color density plot simulation of the Gross-Pitaevskii equation applied to a Bose-Einstein Condensate using C++, OpenMP and CUDA. Result: \href{https://youtu.be/V091IqIRV4c}{youtu.be/V091IqIRV4c}}
-    \twentyitem
-        {Dec 2012}
-        {Jan 2013}
-        {Coloumbian Simulator}
-        {\href{https://github.com/ruifm/charges}{\faGithub github.com/ruifm/charges}}
-        {}
-        {Coulomb force in charges simulator written in C with GTK+.}
-    \twentyitem
-        {Nov 2012}
-        {}
-        {Atkin's Sieve in C}
-        {\href{https://github.com/ruifm/atkin}{\faGithub github.com/ruifm/atkin}}
-        {}
-        {Atkin implementation for finding prime numbers in C with many features.}       
-    %\twentyitem{<dates>}{<title>}{<organization>}{<location>}{<description>}
+	\twentyitem
+	{Oct 2017}
+	{Nov 2017}
+	{Space Out}
+	{\href{https://github.com/ruifm/space-out}{\faGithub github.com/ruifm/space-out}}
+	{}
+	{\en{pygame 1 vs 1 version of the classic arcade game `Asteroids'. Intended for training of a reinforcement learning neural network to work as an AI opponent.}\spa{Versión 1 vs 1 en Pygame del clásico juego de arcade `Asteroids'. Destinado para el entrenamiento de una red neuronal de refuerzo de aprendizaje para trabajar como un oponente de IA.}}
+	\twentyitem
+	{Dec 2016}
+	{\en{Jan}\spa{Ene} 2017}
+	{\en{Entanglement Entropy}\spa{Entropia de Enredo}}
+	{\href{https://github.com/ruifm/ed-triangular}{\faGithub github.com/ruifm/ed-triangular}}
+	{}
+	{\en{Mathematica notebook for the exact digitalization and Entanglement Entropy computation in a Triangular Spin lattice.}\spa{Cuaderno de Mathematica para la diagonalización exacta y cálculo de entropía de enredo en un enrejado de spin triangular.}}
+	\twentyitem
+	{May 2015}
+	{}
+	{Oort Cloud}
+	{\href{https://github.com/ruifm/oort}{\faGithub github.com/ruifm/oort}}
+	{}
+	{\en{A javascript version using the Phaser framework of the classic arcade game
+			`Asteroids', modified by giving it a little bit of a `flappy bird' tone,
+			i.e.\ a never ending game. Hosted here:
+			\href{www.xente.mundo-r.com/20624313W0001/index.html}{xente.mundo-r.com/20624313W0001/index.html}}\spa{Una
+			versión de JavaScript que utiliza el framework Phaser del clásico juego de
+			arcade `Asteroids', modificado al darle un toque de `flappy bird', i.e.\ un juego interminable. Alojado aquí: \href{www.xente.mundo-r.com/20624313W0001/index.html}{xente.mundo-r.com/20624313W0001/index.html}}}
+	\twentyitem
+	{May 2014}
+	{}
+	{Antifitter}
+	{\href{https://github.com/ruifm/antifitter}{\faGithub github.com/ruifm/antifitter}}
+	{}
+	{\en{C++ program that yields fake experimental data to fit a certain function and plots it automatically.}\spa{Programa en C ++ que produce datos experimentales falsos para ajustarse a una determinada función y traza automáticamente.}}
+	\twentyitem
+	{Dec 2013}
+	{\en{Jan}\spa{Ene} 2014}
+	{Gross-Pitaevskii Simulator}
+	{\href{https://github.com/ruifm/gross-pitaevskii}{\faGithub github.com/ruifm/gross-pitaevskii}}
+	{}
+	{\en{Color density plot simulation of the Gross-Pitaevskii equation applied to
+			a Bose-Einstein Condensate using C++, OpenMP and CUDA\@. Result:
+			\href{https://youtu.be/V091IqIRV4c}{youtu.be/V091IqIRV4c}}\spa{Simulación
+			de la gráfica de densidad de color de la ecuación de Gross-Pitaevskii
+			aplicada a un condensado de Bose-Einstein usando C++, OpenMP y CUDA\@. Resultado: \href{https://youtu.be/V091IqIRV4c}{youtu.be/V091IqIRV4c}}}
+	\twentyitem
+	{Dec 2012}
+	{\en{Jan}\spa{Ene} 2013}
+	{Coloumbian Simulator}
+	{\href{https://github.com/ruifm/charges}{\faGithub github.com/ruifm/charges}}
+	{}
+	{\en{Coulomb force in charges simulator written in C with GTK+.}\spa{Simulador de la fuerza de Coulomb en cargos escrito en C con GTK+.}}
+	\twentyitem
+	{Nov 2012}
+	{}
+	{Atkin's Sieve in C}
+	{\href{https://github.com/ruifm/atkin}{\faGithub github.com/ruifm/atkin}}
+	{}
+	{\en{Atkin implementation for finding prime numbers in C with many features.}\spa{Implementación de Atkin para encontrar números primos en C con muchas características.}}
 \end{twenty}
 
-\section{Projects and Affiliations}
-
+\en{\section{Projects and Affiliations}}\spa{\section{Proyectos y Afiliaciones}}
 \begin{twenty}
-    \twentyitem
-        {Feb 2014}
-        {}
-        {Co-host and Organizer}
-        {\href{http://jornadasdefisica.nfist.pt/index.html}{Engineering Physics Days}}
-        {Lisbon, Portugal}
-        {A 3 day event with physics and engineering seminars from researchers and potential employers. I led a 7 people task force to put together this amazing event.}
-    \twentyitem
-        {Sep 2013}
-        {Sep 2014}
-        {Science entertainer}
-        {\href{http://festadoavante.pcp.pt/2016/}{Festa do Avante}}
-        {Amora, Lisbon, Portugal}
-        {Performed live physics experiments to the general public during the \emph{Avante} Summer festival.}
-    \twentyitem
-        {2012}
-        {2015}
-        {Board Member}
-        {\href{http://nfist.pt}{NFIST} member (IST physics club)}
-        {Lisbon, Portugal}
-        {A dynamic and productive non-profitable organization with tremendous scientific outreach. It's main goal is to create public awareness to the beauty and omnipresence of physics in our daily lives. I've been and active science speaker in public schools, museums and other events.}
-    \twentyitem
-        {Sep 2012}
-        {}
-        {Staff member}
-        {\href{http://www.lip.pt/cmsweek2012/}{CMS Week 2012}}
-        {Lisbon, Portugal}
-        {I was invited by a LIP physicist (former advisor) to be a part of the organizing committee responsible for hosting the event. I had the opportunity to meet renowned physicists worldwide.}
+	\twentyitem
+	{Feb 2014}
+	{}
+	{\en{Co-host and Organizer}\spa{Co-anfirión y organizador}}
+	{\href{http://jornadasdefisica.nfist.pt/index.html}{\en{Engineering Physics Days}\spa{Jornadas de Ingeniería Física}}}
+	{\en{Lisbon}\spa{Lisboa}, Portugal}
+	{\en{A 3 day event with physics and engineering seminars from researchers and potential employers. I led a 7 people task force to put together this amazing event.}\spa{Un evento de 3 días con seminarios de física e ingeniería con investigadores y potenciales empleadores. Dirigí un grupo de trabajo de 7 personas para organizar este asombroso evento.}}
+	\twentyitem
+	{Sep 2013}
+	{Sep 2014}
+	{\en{Science entertainer}\spa{Animador de Ciencias}}
+	{\href{http://festadoavante.pcp.pt/2016/}{Festa do Avante}}
+	{Amora, \en{Lisbon}\spa{Lisboa}, Portugal}
+	{\en{Performed live physics experiments to the general public during the \emph{Avante} Summer festival.}\spa{He realizado experimentos de física en vivo al público durante el festival de verano del \emph{Avante}.}}
+	\twentyitem
+	{2012}
+	{2015}
+	{\en{Board Member}\spa{Miembro de la Junta Directiva}}
+	{\href{http://nfist.pt}{NFIST} member (IST physics club)}
+	{\en{Lisbon}\spa{Lisboa}, Portugal}
+	{\en{A dynamic and productive non-profitable organization with tremendous scientific outreach. It's main goal is to create public awareness to the beauty and omnipresence of physics in our daily lives. I've been and active science speaker in public schools, museums and other events.}\spa{Una organización dinámica y productiva sin fines de lucro con un enorme
+			alcance científico. Su principal objetivo es crear conciencia pública sobre la belleza y la omnipresencia de la física en nuestra vida cotidiana. Enseñé activamente ciencias en escuelas públicas, museos y y otros eventos.}}
+	\twentyitem
+	{Sep 2012}
+	{}
+	{\en{Staff member}\spa{Miembro del personal}}
+	{\href{http://www.lip.pt/cmsweek2012/}{CMS Week 2012}}
+	{\en{Lisbon}\spa{Lisboa}, Portugal}
+	{\en{I was invited by a LIP physicist (former advisor) to be a part of the organizing committee responsible for hosting the event. I had the opportunity to meet renowned physicists worldwide.}\spa{Un físico de LIP (ex supervisor) me invitó a formar parte del comité organizador y responsable de organizar el evento. Tuve la oportunidad de conocer físicos de renombre en todo el mundo.}}
 \end{twenty}
 
-
-
-\end{document} 
+\end{document}
