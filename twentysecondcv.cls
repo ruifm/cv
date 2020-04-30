@@ -2,14 +2,6 @@
 \LoadClass{article}
 \NeedsTeXFormat{LaTeX2e}
 
-\newif\ifen{}
-\newif\ifspa{}
-
-\newcommand{\en}[1]{\ifen#1\fi}
-\newcommand{\spa}[1]{\ifspa#1\fi}
-
-\entrue{}
-% \spatrue{}
 %----------------------------------------------------------------------------------------
 %	 REQUIRED PACKAGES
 %-----------------------------------------------------------------------	-----------------
@@ -21,7 +13,7 @@
 
 \usepackage{pstricks}
 
-\usepackage{fontawesome}
+\usepackage{fontawesome5}
 \RequirePackage{tikz}
 \RequirePackage{xcolor}
 \RequirePackage[absolute,overlay]{textpos}
@@ -143,7 +135,7 @@
 \pgfmathsetlength{\imagewidth}{5cm}
 \pgfmathsetlength{\imagescale}{\imagewidth/600}
 
-\newcommand{\profilesection}[2]{\vspace{8pt}{\color{darkblue!80} \huge #1 \rule[0.15\baselineskip]{#2}{1pt}}}
+\newcommand{\profilesection}[2]{\vspace{8pt}{\color{blue!80} \huge #1 \rule[0.15\baselineskip]{#2}{1pt}}}
 
 % Define custom commands for CV info
 \newcommand{\cvdate}[1]{\renewcommand{\cvdate}{#1}}
@@ -264,7 +256,7 @@
 			\ifthenelse{\equal{\cvmail}{}}{}{
 				{$
 							\begin{array}{l}
-								\hspace{2.5mm} \huge \textnormal{\textcolor{yt}{\faEnvelopeO}}
+								\hspace{2.5mm} \huge \textnormal{\textcolor{yt}{\faEnvelope}}
 							\end{array}
 						$}
 			   & \href{mailto:\cvmail}{\cvmail} \\}
